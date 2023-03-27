@@ -20,8 +20,8 @@ def hide_information(init_data):
 
 class Transaction:
     """Transaction of a user"""
-    def __init__(self, date_: str, description: str, source: str,
-                 destination: str, amount: str, currency: str):
+    def __init__(self, date_: str, description: str, destination: str,
+                 amount: str, currency: str, source: str=None):
         """Class initialization"""
         self.date = date_
         self.description = description
@@ -41,10 +41,16 @@ class Transaction:
             f"Валюта: {self.currency}\n"
         )
 
+    def set_source(self, source):
+        self.__source = source
+
     def get_source(self):
         """
         Returns hidden source of transaction
         """
+        # Check if source exists
+        if self.__source is None:
+            return "Н/П"
         return hide_information(self.__source)
 
     def get_destination(self):
