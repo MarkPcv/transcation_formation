@@ -1,5 +1,5 @@
 import json
-from transaction import Transaction
+from utils.transaction import Transaction
 
 def read_data():
     """
@@ -7,7 +7,7 @@ def read_data():
     """
     text = ""
     # Open file retrieve each line
-    with open("../data/operations.json", "r", encoding="utf-8") as file:
+    with open("data/operations.json", "r", encoding="utf-8") as file:
         for line in file:
             text += line.rstrip()
     # Return list of transactions
