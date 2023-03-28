@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "project-backend"
+version = "0.1.0"
+description = "A project to cover Basic Principles of Backend Development"
+authors = ["Mark Pochivalov <pochivalov.mark@gmail.com>"]
+readme = "README.md"
+packages = [
+  {include = "utils"},
+  {include = "tests"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.2"
+pytest-cov = "^4.0.0"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+
+[tool.poetry.scripts]
+start = 'main:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
