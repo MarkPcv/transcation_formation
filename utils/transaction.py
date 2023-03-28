@@ -76,20 +76,3 @@ class Transaction:
             f"{self.get_source()} -> {self.get_destination()}\n"
             f"{self.amount} {self.currency}\n"
         )
-
-
-############################################
-# Testing
-############################################
-trans = Transaction("2019-08-26T10:50:58.294041",
-                    "Перевод организации",
-                    "Maestro 1596837868705199",
-                    "Счет 64686473678894779589",
-                    "31957.58",
-                    "руб.")
-
-#print(trans.get_source())
-#print(trans.get_destination())
-#print(trans)
-#print(trans.get_date())
-#print(trans.show_details())

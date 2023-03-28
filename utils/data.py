@@ -24,11 +24,11 @@ def get_five():
         # Check if transaction has status "EXECUTED"
         if transaction["state"] == "EXECUTED":
             temp = Transaction(
-                date_ = transaction["date"],
-                description = transaction["description"],
-                destination = transaction["to"],
-                amount = transaction["operationAmount"]["amount"],
-                currency = transaction["operationAmount"]["currency"]["name"],
+                transaction["date"],
+                transaction["description"],
+                transaction["to"],
+                transaction["operationAmount"]["amount"],
+                transaction["operationAmount"]["currency"]["name"],
             )
             # Check if there is source for transaction
             if "from" in transaction.keys():
@@ -39,9 +39,3 @@ def get_five():
             break
 
     return transactions
-############################################
-# Testing
-############################################
-# print(read_data())
-# for i in get_five():
-#     print(i.show_details())
