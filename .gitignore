@@ -1,5 +1,2 @@
 .idea
 .venv
-# Poetry files
-poetry.lock
-pyproject.toml
