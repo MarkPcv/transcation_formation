@@ -1,7 +1,7 @@
-# Project for «Basics backend-development»
+# Project «Transaction String Fomation»
 
 ## Description
-This project shows the ability of the developer to imitate the process of program development to achieve a specific task:
+This project converts trasncation data in JSON format and output in customized way:
 
 _Implement a function that displays a list of the last 5 transactions performed by the client in the format:_  
 `<Transaction Date> <Transaction Description>`  
